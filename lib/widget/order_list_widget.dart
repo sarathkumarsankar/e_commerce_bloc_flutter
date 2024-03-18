@@ -15,14 +15,13 @@ class OrderList extends StatelessWidget {
           );
         } else if (orderState is OrdersLoaded) {
           final orders = (orderState as OrdersLoaded).orders; 
-          return Expanded(
-            child: ListView.builder(
+          return ListView.builder(
               itemCount: orders.length,
               itemBuilder: (context, index) {
                 final order = orders[index];
                 return OrderWidget(order: order);
               },
-            ),
+            
           );
         } else if (orderState is OrdersError) {
           final error = (orderState as OrdersError); 

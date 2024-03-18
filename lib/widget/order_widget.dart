@@ -9,6 +9,7 @@ class OrderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      leading: Image.asset('assets/images/avatar.jpeg'),
       title: Text(order.customerName),
       subtitle: Text(order.status.name),
     );
